@@ -1,0 +1,5 @@
+wc nazarin.txt | ./wstat
+wc *.txt | ./wstat
+cat *.txt| ./splt |tee more | head -n 100 | wc | ./wstat
+cat *.txt| ./splt |tee more | tail -n 100 | wc | ./wstat  
+cat *.txt | ./splt | tee more | uniq -u | wc | ./wstat

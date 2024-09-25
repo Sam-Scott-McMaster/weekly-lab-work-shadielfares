@@ -1,0 +1,5 @@
+Thus far in 2XC3 I have learned mainly how to use VIM. Vim has been an amazing tool to add to my skillset. Beyond that, I have re-downloaded Ubuntu 24.04 and it has been running so smoothly on my old laptop. 
+
+Learning the commands to manuver around Linux as well as adjusting my OOP assignments has been an amazing learning experience thus far.
+
+I am super excited to fully learn Git for the first time, as I usually use Git desktop.

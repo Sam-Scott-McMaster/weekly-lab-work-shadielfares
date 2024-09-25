@@ -1,0 +1,9 @@
+./splt <shakespeare.txt uniq -u | tee more 
+./splt <shakespeare.txt uniq -u | tee more | wc -w
+./splt <shakespeare.txt >> lexicon.txt | uniq -u | wc -w lexicon.txt
+./splt <shakespeare.txt uniq -u | tee more | head -n 1
+./splt <shakespeare.txt uniq -u | tee more | tail -n 1
+./splt <shakespeare.txt uniq -u | tee more | head -n 9998 | tail -n 1
+
+ 
+ 
