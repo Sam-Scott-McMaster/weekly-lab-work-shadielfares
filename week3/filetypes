@@ -1,0 +1,26 @@
+#!/bin/bash
+#A program to determine whether the arguments passed is a file, a directory or unknown
+#Shadi El-Fares
+#Sept.30.24
+
+#If arguments are same or no inputs, out error
+if [[ -z $# ]]
+then
+	echo "How dare you not enter an argument.." >&2
+	exit 1
+#Output smaller value
+else
+       #Check if directory,file or unknown	
+	for item in "$@"
+	do 
+		if [[ -d $item ]]
+		then
+			echo "directory: $item"
+		elif [[ -f $item ]]
+		then
+			echo "file: $item"
+		else
+			echo "unknown: $item"
+		fi
+	done
+fi

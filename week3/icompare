@@ -1,0 +1,19 @@
+#!/bin/bash
+#A program to compare 2 inputs (by regular integer comparison)
+#Shadi El-Fares
+#Sept.30.24
+
+#If arguments are same or no inputs, out error
+if  [[ $1 == $2 ]] || [[ -z $# ]]
+then
+	echo "How dare you not comply with this code's rules" >&2
+	exit 1
+#Output smaller value
+elif  [[ $1 -lt $2 ]]
+then
+	echo $1
+	exit 0
+else 
+	echo $2
+	exit 0
+fi
