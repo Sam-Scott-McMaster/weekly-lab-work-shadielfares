@@ -1,0 +1,15 @@
+#!/bin/bash
+#A splitting process
+#Shadi El-Fares
+#Sept.30.24
+#Read until end of file, for every word in the line, output it to stdout
+while read line
+do
+	for item in $line
+	do
+		if [[ $item =~ ^[a-zA-Z0-9]+$ ]];
+		then
+			echo $item
+		fi
+	done
+done
