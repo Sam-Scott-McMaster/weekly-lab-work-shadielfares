@@ -1,0 +1,15 @@
+Honestly, I would never use this language. 
+
+So overly complicated for no reason, like Python EVEN JAVA is so much more intuitive than this.
+
+I would honestly, rather write in Lisp than intialize one more string as an array of characters.
+
+Modern programming doesn't have to be harder than it already is and I would advice junior programmers to spend their time learning system design, even digital logic to better understand low level programming.
+
+Benefit: 
+	C can allow you to manage memory more practically and hands on than other languages allow one to do.
+
+Disadvantage:
+	Overly complicated and unintuitive syntax. The memory leaks return no useful error, so you are just kind of lost if you don't know how to manage it.
+
+Python all day baby.
