@@ -1,0 +1,18 @@
+I think this side affect allows for an additional level of 
+difficulty assiocatied to the programming language C.
+
+Something I learned from Veerash was that these 'side effects' are offered in other
+programming languages too such as Python, the difference is that it is abstracted out
+from the developer as you don't have pointers in Python.
+
+I think the advantages is that you can sort of repurpose the same variables.
+
+I think an example of where pointers to create side-effects from non-local variables could be
+to create a palindrome program that just checks if a word is a palindrome such as madam.
+
+By using a pointer we can simply check if the pointer value at the end of the word 
+has the same values moving left as the pointer set at the beginning of the word and moving right.
+
+This is an easier approach than setting up say a double for loop to count up and one to count down and iterate through the string madam as such.
+
+Disadvantages is that since its not abstracted out from the user, you have to understand dynamic memory allocation and how you access the reference of the original variable and the fact that its not stored in memory.

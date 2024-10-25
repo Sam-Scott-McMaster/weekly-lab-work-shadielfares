@@ -1,0 +1,44 @@
+        -:    0:Source:digits.c
+        -:    0:Graph:testdigits-digits.gcno
+        -:    0:Data:testdigits-digits.gcda
+        -:    0:Runs:1
+        -:    1:/* Starter code for Lab 6.1 Activity
+        -:    2: *
+        -:    3: * This file will not compile as is. You need to create the digits function.
+        -:    4: *
+        -:    5: */
+        -:    6:#include <stdio.h>
+        -:    7:#include <stdlib.h>
+        -:    8:#include <string.h>
+        -:    9:
+        -:   10:/* Main funcion. Runs test cases for the digits function.
+        -:   11: * Exits with failure code on first test case fail.
+        -:   12: * Otherwise exits with success.
+        -:   13: */
+        3:   14:int digits(int n, int *max, int *min)
+        -:   15:{
+        3:   16:    int i, sum = 0;
+        -:   17:    // It is neccesary to initalize them as zero or else it takes on either null or just won't work properly..
+        -:   18:    // Just good practice.
+        3:   19:    *min = 100, *max = -100;
+        -:   20:
+        -:   21:    do
+        -:   22:    {
+        -:   23:        //Abs value to handle negative values
+        9:   24:        n = abs(n);
+        -:   25:        //Select right most digit
+        9:   26:        int digit = n % 10;
+        -:   27:        //Return max and min 
+        9:   28:        if (digit > *max){
+        3:   29:            *max = digit;
+        -:   30:        }
+        9:   31:        if (digit < *min){
+        9:   32:            *min = digit;
+        -:   33:        }
+        9:   34:        sum += digit;
+        -:   35:        //Get rid of rightmost digit
+        9:   36:        n /= 10;
+        9:   37:    } while (n > 0);
+        -:   38:    
+        3:   39:    return sum;
+        -:   40:}
