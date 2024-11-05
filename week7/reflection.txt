@@ -1,0 +1,7 @@
+I think the main advantage of pointer arithmetic is performance, like since you can directly manipulate the memory and location of the array you need to traverse through.
+
+I think this can be more useful in a large array as you don't have to worry about indexbounds when traversing in a loop, and this saves the compiler time for checking for array bounds.
+
+Disadvantage is that it can lead to harder code to maintain and write, it can confuse developers as the memory access is no longer abstracted out.
+
+This becomes ever more challenging in a large codepsace and the possibiliy of dereferencing null or invalid pointers leading to undefined behaviour and hard bugs to solve.
