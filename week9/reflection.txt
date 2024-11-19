@@ -1,0 +1,14 @@
+1.a) The original functions are slower than the parametrized macros which is slower than the simple boolean comparisions.
+i.e: Original functions < Parametrized macros < Simple boolean comparisions
+
+Trade-offs are mainly between speed and readability. The original functions are the slowest but the most readable. The parametrized macros are faster but less readable. The simple boolean comparisions are the fastest but the least readable.
+
+Question: When we're looking to remove function calls, is it better to use a parameterized macro to replace a function call, or is it better to just replace the function call with the equivalent code?
+1.b) It is better to use a parameterized macro to replace a function call. This is because the parameterized macro is faster than the original function call. The parameterized macro is faster because it is a direct replacement of the function call, whereas the equivalent code is slower because it is a more complex implementation of the function call. The parameterized macro is also more readable than the equivalent code, making it easier to understand and maintain.
+
+Exercise 4:
+
+Yes I got a way better performance improvement, as runtime was less than a second which makes sense as we had conditions to check the amount of elements our algorithm would be processing, so we in turn reduced the amount of load on the system by reducing the inputs to our algorithm.
+
+It would be good to remove function calls if its a small codebase and readability is not off huge priority or you are full optimizing for speed with regards to backend processes.
+
