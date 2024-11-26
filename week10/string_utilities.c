@@ -10,8 +10,6 @@
 //Can't be a double pointer either as that defines an array of strings such as *argv[]
 char *to_upper(char *word){
     //Going up until terminating character
-    printf("%ld", sizeof(word));
-    printf("%ld", strlen(word));
     for (int i = 0; word[i] != '\0'; i++){
         //Subtract 32 via ascii table thats the difference between all lowercase and uppercharacters
         //Additional checking for lowercase, because capital letters should not be added
@@ -89,7 +87,34 @@ void find_content(char *s, char **first, char **last){
  * Params: String
  * Return: Function without space
  */
+void trim(char *s, char **first, char **last) {
+    int length = strlen(s);
+    char *tempStr = malloc((length + 1) * sizeof(char));
+    if (!tempStr) {
+        perror("Memory allocation failed");
+        exit(1);
+    }
 
-void trim(char *s){
-    
+    int j = 0;  // Index for tempStr
+
+    for (int i = 0; i < length; i++) {
+        // Copy non-whitespace characters
+        if (s[i] != ' ' && s[i] != '\t' && s[i] != '\n') {
+            tempStr[j++] = s[i];
+        }
+        // Replace multiple spaces with a single space
+        else if (j > 0 && tempStr[j - 1] != ' ') {
+            tempStr[j++] = ' ';
+        }
+    }
+
+    // Null-terminate the trimmed string
+    if (j > 0 && tempStr[j - 1] == ' ') {
+        j--;  // Remove trailing space
+    }
+    tempStr[j] = '\0';
+
+    printf("%s\n", tempStr);
+    free(tempStr);
 }
+

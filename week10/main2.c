@@ -3,9 +3,8 @@
 
 int main(int argc, char *argv[]){
 
-    char *s = "   ";
+    char *s = " hello world  ";
     char *first, *last;
     find_content(s,&first, &last);
-    printf("%c...%c\n", *first, *last);
-
+    trim(s, &first, &last);
 } 
